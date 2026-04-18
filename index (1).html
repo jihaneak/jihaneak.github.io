@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akharaz Jihane — CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --mid: #4a4a4a;
+      --light: #888;
+      --rule: #d4cfc9;
+      --accent: #2d5a8e;
+      --bg: #faf9f7;
+      --page: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--page);
+      border: 1px solid var(--rule);
+      padding: 64px 72px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding-bottom: 32px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .subtitle {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--mid);
+      line-height: 1.9;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    /* ── PROFILE ── */
+    .profile {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.08rem;
+      font-style: italic;
+      color: var(--mid);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      padding-left: 20px;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* ── SECTIONS ── */
+    section { margin-bottom: 32px; }
+
+    .section-title {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ── ENTRIES ── */
+    .entry { margin-bottom: 20px; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .entry-title {
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+
+    .entry-meta {
+      font-size: 0.78rem;
+      color: var(--light);
+      white-space: nowrap;
+    }
+
+    .entry-sub {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--mid);
+      margin-top: 2px;
+    }
+
+    ul.bullets {
+      margin-top: 8px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul.bullets li {
+      font-size: 0.84rem;
+      color: var(--mid);
+      line-height: 1.65;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    ul.bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+    }
+
+    /* ── SKILLS GRID ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 32px;
+    }
+
+    .skill-block {}
+
+    .skill-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .skill-value {
+      font-size: 0.82rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    /* ── TAGS ── */
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      color: var(--mid);
+      background: var(--bg);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.75rem;
+      color: var(--light);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { border: none; box-shadow: none; padding: 40px; }
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 32px 24px; }
+      h1 { font-size: 2rem; }
+      header { grid-template-columns: 1fr; }
+      .contact { text-align: left; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <h1>Akharaz Jihane</h1>
+      <p class="subtitle">Engineering Student · Statistics &amp; Big Data · INSEA</p>
+    </div>
+    <div class="contact">
+      <div>+212 664 89 86 93</div>
+      <div><a href="mailto:akharazjihane@gmail.com">akharazjihane@gmail.com</a></div>
+      <div><a href="https://linkedin.com/in/jihane-akharaz" target="_blank">linkedin.com/in/jihane-akharaz</a></div>
+      <div><a href="https://github.com/jihaneak" target="_blank">github.com/jihaneak</a></div>
+      <div>Rabat, Morocco</div>
+    </div>
+  </header>
+
+  <p class="profile">
+    Engineering student at INSEA, specialising in Statistics and Big Data. Passionate about quantitative analysis
+    and predictive modelling, open to opportunities where technical skills meet strategic consulting
+    and data-driven decision support.
+  </p>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2 class="section-title">Education</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Institut National de Statistique et d'Économie Appliquée (INSEA)</span>
+        <span class="entry-meta">2024 – Present · Rabat</span>
+      </div>
+      <div class="entry-sub">Engineering Degree — Statistics, Demography &amp; Big Data</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Classes Préparatoires aux Grandes Écoles (CPGE)</span>
+        <span class="entry-meta">2022 – 2024 · Kenitra</span>
+      </div>
+      <div class="entry-sub">Mathematics, Physics &amp; Engineering Sciences</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Baccalauréat — Sciences Mathématiques A</span>
+        <span class="entry-meta">2022 · Kenitra</span>
+      </div>
+      <div class="entry-sub">Graduated with Distinction (Très Bien)</div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Ministry of Economy and Finance — DEPF</span>
+        <span class="entry-meta">July 2025 · Rabat</span>
+      </div>
+      <div class="entry-sub">Intern — Macro-Financial Analyst</div>
+      <ul class="bullets">
+        <li><strong>Market Analysis:</strong> Studied the impact of Bank Al-Maghrib monetary policies and the Casablanca Stock Exchange performance on the national economy.</li>
+        <li><strong>Modelling &amp; Synthesis:</strong> Analysed interconnections between money and capital markets to identify economic growth levers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">OMNIRISK — Decision Support System &amp; Risk Management</span>
+      </div>
+      <ul class="bullets">
+        <li>Built a multi-source data pipeline (S&amp;P 500, market sentiment, macro indicators) using SQLite.</li>
+        <li>Trained an LSTM model to classify volatility regimes (Stress vs. Calm) — Val AUC 0.79.</li>
+        <li>Implemented a conviction-based dynamic position sizing strategy, reducing Maximum Drawdown by <strong>42%</strong> vs. buy-and-hold benchmark, with improved Calmar ratio.</li>
+        <li>Delivered an interactive Streamlit dashboard for real-time regime monitoring.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Stochastic Mortality Modelling &amp; Projection</span>
+      </div>
+      <ul class="bullets">
+        <li>Calibrated Lee-Carter and CBD models on 50 years of Human Mortality Database data via SVD decomposition.</li>
+        <li>Conducted 20-year rolling backtests (RMSE: 0.46 years) with bootstrapped confidence intervals.</li>
+        <li>Built a Streamlit dashboard embedding mortality tables and Monte Carlo simulations.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Geospatial Analysis Dashboard — Power BI &amp; Google Earth Engine</span>
+      </div>
+      <ul class="bullets">
+        <li>Extracted and processed environmental and urban indicators via Google Earth Engine APIs.</li>
+        <li>Designed a Power BI dashboard for cartographic visualisation and trend analysis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-block">
+        <div class="skill-label">Data Science &amp; AI</div>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Statsmodels</span>
+          <span class="tag">LSTM</span>
+          <span class="tag">ARIMA</span>
+          <span class="tag">GARCH</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label">Actuarial &amp; Risk</div>
+        <div class="tag-row">
+          <span class="tag">Lee-Carter</span>
+          <span class="tag">CBD</span>
+          <span class="tag">Monte Carlo</span>
+          <span class="tag">Mortality Tables</span>
+          <span class="tag">Demographic Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label">Data Engineering</div>
+        <div class="tag-row">
+          <span class="tag">SQL / SQLite</span>
+          <span class="tag">SQLAlchemy</span>
+          <span class="tag">APIs</span>
+          <span class="tag">Web Scraping</span>
+          <span class="tag">Google Earth Engine</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label">Visualisation &amp; BI</div>
+        <div class="tag-row">
+          <span class="tag">Power BI</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">GIS / Cartography</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <h2 class="section-title">Languages</h2>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <div class="tag-row">
+          <span class="tag">Arabic — Native</span>
+          <span class="tag">French — Professional</span>
+          <span class="tag">English — Fluent</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT SKILLS -->
+  <section>
+    <h2 class="section-title">Key Strengths</h2>
+    <div class="tag-row">
+      <span class="tag">Analytical Thinking</span>
+      <span class="tag">Technical Communication</span>
+      <span class="tag">Methodological Rigour</span>
+      <span class="tag">Operational Adaptability</span>
+    </div>
+  </section>
+
+  <footer>
+    Akharaz Jihane · akharazjihane@gmail.com · github.com/jihaneak
+  </footer>
+
+</div>
+</body>
+</html>
