@@ -311,12 +311,13 @@
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Stochastic Mortality Modelling &amp; Projection</span>
+        <span class="entry-title">Stochastic modelling of life expectancy &amp; longevity risk quantification</span>
       </div>
       <ul class="bullets">
-        <li>Calibrated Lee-Carter and CBD models on 50 years of Human Mortality Database data via SVD decomposition.</li>
-        <li>Conducted 20-year rolling backtests (RMSE: 0.46 years) with bootstrapped confidence intervals.</li>
-        <li>Built a Streamlit dashboard embedding mortality tables and Monte Carlo simulations.</li>
+        <li>Comparison of 5 actuarial models (Lee-Carter, LC2, CBD, Renshaw-Haberman, Bayesian Kalman Filter) on HMD France M+F data 1950–2024.</li>
+        <li>Rolling one-step-ahead backtest 2001–2020: CBD achieves RMSE = 0.188 yr and 95% CI coverage.</li>
+        <li>Longevity risk quantification: total recommended provision €595,313 (4.1% of capital) for a 100-annuity portfolio (€14.37M), per Solvency II standards.</li>
+        <li>Live Streamlit dashboard &amp; Reusable CLI pipeline.</li>
       </ul>
     </div>
 
