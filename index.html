@@ -299,25 +299,43 @@
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">OMNIRISK — Decision Support System &amp; Risk Management</span>
+        <span class="entry-title">Stress Test Solvency II — MASI/OAT Risk Assessment (Morocco)</span>
       </div>
       <ul class="bullets">
-        <li>Built a multi-source data pipeline (S&amp;P 500, market sentiment, macro indicators) using SQLite.</li>
-        <li>Trained an LSTM model to classify volatility regimes (Stress vs. Calm) — Val AUC 0.79.</li>
-        <li>Implemented a conviction-based dynamic position sizing strategy, reducing Maximum Drawdown by <strong>42%</strong> vs. buy-and-hold benchmark, with improved Calmar ratio.</li>
-        <li>Delivered an interactive Streamlit dashboard for real-time regime monitoring.</li>
+        <li>Modelled market dependence using <strong>Gaussian Copulas & EVT-GPD</strong>; demonstrated that standard normal distributions underestimate tail risk by <strong>40%</strong>.</li>
+        <li>Calculated Solvency Capital Requirement (SCR) under equity (-49%) and rate shocks (+42%), identifying a 54M MAD deficit.</li>
+        <li>Optimized asset allocation using <strong>Random Forest + SHAP</strong>, recommending a 25% MASI exposure (a 10x more cost-effective solution than capital raising).</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Stochastic modelling of life expectancy &amp; longevity risk quantification</span>
+        <span class="entry-title">Stochastic Mortality Forecasting & Longevity Risk Quantification</span>
       </div>
       <ul class="bullets">
-        <li>Comparison of 5 actuarial models (Lee-Carter, LC2, CBD, Renshaw-Haberman, Bayesian Kalman Filter) on HMD France M+F data 1950–2024.</li>
-        <li>Rolling one-step-ahead backtest 2001–2020: CBD achieves RMSE = 0.188 yr and 95% CI coverage.</li>
-        <li>Longevity risk quantification: total recommended provision €595,313 (4.1% of capital) for a 100-annuity portfolio (€14.37M), per Solvency II standards.</li>
-        <li>Live Streamlit dashboard &amp; Reusable CLI pipeline.</li>
+        <li>Benchmarked 5 actuarial models (Lee-Carter, CBD, Kalman) on HMD France data (1950–2024). Validated via <strong>rolling backtest (RMSE: 0.188 yr)</strong>.</li>
+        <li>Quantified longevity risk under Solvency II: recommended a €595K provision (4.1% of capital) for a €14.37M annuity portfolio.</li>
+        <li>Developed a real-time <strong>Streamlit monitoring dashboard</strong> and a modular Python CLI pipeline for automated reporting.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">OMNIRISK — Decision Support System & Volatility Management</span>
+      </div>
+      <ul class="bullets">
+        <li>Built a multi-source data pipeline (S&amp;P 500, sentiment, macro indicators) with a custom LSTM model to classify volatility regimes.</li>
+        <li>Implemented a conviction-based dynamic position sizing strategy, reducing <strong>Maximum Drawdown by 42%</strong> vs. buy-and-hold benchmark.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Banking UX Intelligence — End-to-End Data Engineering & NLP Pipeline</span>
+      </div>
+      <ul class="bullets">
+        <li>Engineered a full-stack pipeline: <strong>Playwright</strong> (Scraping), <strong>Apache Airflow</strong> (Orchestration), and <strong>DBT on PostgreSQL</strong> (Modeling).</li>
+        <li>Applied a multilingual <strong>BERT</strong> sentiment model (88.4% accuracy) to 590+ reviews to identify critical service pain points for 5 major banks.</li>
       </ul>
     </div>
 
@@ -326,8 +344,8 @@
         <span class="entry-title">Geospatial Analysis Dashboard — Power BI &amp; Google Earth Engine</span>
       </div>
       <ul class="bullets">
-        <li>Extracted and processed environmental and urban indicators via Google Earth Engine APIs.</li>
-        <li>Designed a Power BI dashboard for cartographic visualisation and trend analysis.</li>
+        <li>Extracted urban and environmental indicators via <strong>Google Earth Engine APIs</strong> for spatial trend analysis.</li>
+        <li>Designed an interactive Power BI dashboard for cartographic visualization and executive reporting.</li>
       </ul>
     </div>
   </section>
@@ -338,51 +356,37 @@
     <div class="skills-grid">
 
       <div class="skill-block">
-        <div class="skill-label">Data Science &amp; AI</div>
-        <div class="tag-row">
-          <span class="tag">Python</span>
-          <span class="tag">TensorFlow</span>
-          <span class="tag">Scikit-learn</span>
-          <span class="tag">Statsmodels</span>
-          <span class="tag">LSTM</span>
-          <span class="tag">ARIMA</span>
-          <span class="tag">GARCH</span>
-        </div>
-      </div>
+  <div class="skill-label">Data Science & AI</div>
+  <div class="tag-row">
+    <span class="tag">Python (Scikit-Learn, TensorFlow)</span>
+    <span class="tag">NLP (BERT)</span>
+    <span class="tag">Time Series (ARIMA, GARCH)</span>
+    <span class="tag">Explainable AI (SHAP)</span>
+  </div>
+</div>
 
-      <div class="skill-block">
-        <div class="skill-label">Actuarial &amp; Risk</div>
-        <div class="tag-row">
-          <span class="tag">Lee-Carter</span>
-          <span class="tag">CBD</span>
-          <span class="tag">Monte Carlo</span>
-          <span class="tag">Mortality Tables</span>
-          <span class="tag">Demographic Analysis</span>
-        </div>
-      </div>
+<div class="skill-block">
+  <div class="skill-label">Actuarial & Risk</div>
+  <div class="tag-row">
+    <span class="tag">Solvency II (SCR, VaR)</span>
+    <span class="tag">Extreme Value Theory (EVT)</span>
+    <span class="tag">Copulas</span>
+    <span class="tag">Lee-Carter/CBD Models</span>
+    <span class="tag">Monte Carlo</span>
+  </div>
+</div>
 
-      <div class="skill-block">
-        <div class="skill-label">Data Engineering</div>
-        <div class="tag-row">
-          <span class="tag">SQL / SQLite</span>
-          <span class="tag">SQLAlchemy</span>
-          <span class="tag">APIs</span>
-          <span class="tag">Web Scraping</span>
-          <span class="tag">Google Earth Engine</span>
-        </div>
-      </div>
-
-      <div class="skill-block">
-        <div class="skill-label">Visualisation &amp; BI</div>
-        <div class="tag-row">
-          <span class="tag">Power BI</span>
-          <span class="tag">Streamlit</span>
-          <span class="tag">GIS / Cartography</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
+<div class="skill-block">
+  <div class="skill-label">Data Engineering & BI</div>
+  <div class="tag-row">
+    <span class="tag">SQL (PostgreSQL)</span>
+    <span class="tag">Airflow</span>
+    <span class="tag">DBT</span>
+    <span class="tag">Streamlit</span>
+    <span class="tag">Power BI</span>
+    <span class="tag">Git</span>
+  </div>
+</div>
 
   <!-- LANGUAGES -->
   <section>
